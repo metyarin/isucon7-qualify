@@ -466,7 +466,7 @@ $app->post('/profile', function (Request $request, Response $response) {
         $stmt->execute([$displayName, $userId]);
     }
 
-    return $response->withRedirect('/', 303);
+    return $response->withRedirect('/', 400);
 })->add($loginRequired);
 
 function ext2mime($ext)
